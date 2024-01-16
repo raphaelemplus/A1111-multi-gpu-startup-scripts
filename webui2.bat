@@ -1,6 +1,7 @@
 @echo off
 
-if not defined PYTHON (set PYTHON=python)
+echo Get Path for Python 3.10
+for /f "usebackq delims=" %%i in (`py -3.10 -c "import sys; print(sys.executable)"`) do set "PYTHON=%%i"
 if not defined VENV_DIR (set "VENV_DIR=%~dp0%venv")
 
 set SD_WEBUI_RESTART=tmp/restart

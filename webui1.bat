@@ -5,7 +5,7 @@ if not defined VENV_DIR (set "VENV_DIR=%~dp0%venv")
 
 set SD_WEBUI_RESTART=tmp/restart
 set ERROR_REPORTING=FALSE
-set COMMANDLINE_ARGS=--api --xformers --listen --port 7861 --device-id 1
+set COMMANDLINE_ARGS=--api --xformers --listen --port 7861 --disable-safe-unpickle --device-id 1
 
 
 mkdir tmp 2>NUL
